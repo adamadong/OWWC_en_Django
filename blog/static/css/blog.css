@@ -9,7 +9,3 @@ h1{
     height: 300px; /* 设置容器的高度 */
     background-color: #80A8FF;
 }
-.card-flag{
-    max-width: 100%;
-    height: auto;
-}

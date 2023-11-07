@@ -7,7 +7,7 @@
         {% for team in teams %}
             <div class="col-md-4"> <!-- 列宽占据1/3，每行最多3列 -->
                 <div class="card">
-                    <img src="{{team.flag_url}}" class="img-fluid">
+                    <img src="{{team.flag_url}}" class="img-flag">
                     <div class="card-body">
                         <h5 class="card-title"> {{ team.Country }}</h5>
                         <p class="card-text">Number of players: {{ team.nb_player }}</p>
