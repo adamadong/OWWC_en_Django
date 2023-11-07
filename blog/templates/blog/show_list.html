@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for team in teams %}
+        <div>
+            <p>Country: {{team.Country}}</p>
+            <p>Number of players: {{team.nb_player}}</p>
+            <p>Rank: {{team.Rank}}</p>
+            <br>
+        </div>
+    {% endfor %}
+{% endblock %}
+        
