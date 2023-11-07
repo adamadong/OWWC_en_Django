@@ -1,12 +1,41 @@
 {% extends 'blog/base.html' %}
+
 {% block content %}
-    {% for team in teams %}
-        <div>
-            <p>Country: {{team.Country}}</p>
-            <p>Number of players: {{team.nb_player}}</p>
-            <p>Rank: {{team.Rank}}</p>
-            <br>
-        </div>
-    {% endfor %}
+    <h2 class="text-center">Teams</h2>
+    <hr>
+    <div class="row">
+        {% for team in teams %}
+            <div class="col-md-4"> <!-- 列宽占据1/3，每行最多3列 -->
+                <div class="card">
+                    <img src="{{team.flag_url}}" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ team.Country }}</h5>
+                        <p class="card-text">Number of players: {{ team.nb_player }}</p>
+                        <p class="card-text">Rank: {{ team.rank }}</p>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                </div><div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+    <h2 class="text-center">Facilities</h2>
+    <hr>
+    <div class="row">
+        {% for eq in equipments %}
+            <div class="col-md-4"> <!-- 列宽占据1/3，每行最多3列 -->
+                <div class="card">
+                    <img src="{{eq.pic_url}}" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ eq.Id_equipment }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                </div><div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}
         

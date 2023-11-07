@@ -1,0 +1,15 @@
+
+h1{
+    font-family: 'Young Serif', serif;
+}
+.custom-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 300px; /* 设置容器的高度 */
+    background-color: #80A8FF;
+}
+.card-flag{
+    max-width: 100%;
+    height: auto;
+}
