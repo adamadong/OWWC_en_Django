@@ -10,8 +10,8 @@
                     <img src="{{team.flag_url}}" class="img-flag">
                     <div class="card-body">
                         <h5 class="card-title"> {{ team.Country }}</h5>
-                        <p class="card-text">Number of players: {{ team.nb_player }}</p>
                         <p class="card-text">Rank: {{ team.rank }}</p>
+                        <p class="card-text">State: {{ team.state }}</p>
                     </div>
                 </div>
             </div>
@@ -29,6 +29,13 @@
                     <img src="{{eq.pic_url}}" class="img-fluid">
                     <div class="card-body">
                         <h5 class="card-title"> {{ eq.Id_equipment }}</h5>
+                        <p class="card-text">Teams:</p>
+                        <ul>
+                            {% for team in eq.teams.all %}
+                                <li>{{ team.Country }}</li>
+                            {% endfor %}
+                        </ul>
+                        <br>
                     </div>
                 </div>
             </div>
