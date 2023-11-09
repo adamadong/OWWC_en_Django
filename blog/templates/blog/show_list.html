@@ -9,7 +9,7 @@
                 <div class="card">
                     <img src="{{team.flag_url}}" class="img-flag">
                     <div class="card-body">
-                        <h5 class="card-title"> {{ team.Country }}</h5>
+                        <a class="card-title" href="{% url 'team_detail' pk=team.pk %}"> {{ team.Country }}</a>
                         <p class="card-text">Rank: {{ team.rank }}</p>
                         <p class="card-text">State: {{ team.state }}</p>
                     </div>
