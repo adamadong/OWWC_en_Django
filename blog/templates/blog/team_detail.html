@@ -6,10 +6,17 @@
         <a href="/">{{ team.pk }}</a>
     </h1>
     <p>Place: {{team.place}}</p>
+    <p>State: {{team.state}}</p>
+    
     <form method="POST" class="post-form">{% csrf_token %}
         <b> Changer : </b> {{ form.as_ul }}
         <button type="submit" class="btn ">OK</button>
         <a href="{% url 'team_detail' pk=team.pk %}">Back</a>
     </form>
+    {% if message != ''%}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {% endif %}
 </div>
 {% endblock %}

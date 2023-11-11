@@ -1,0 +1,15 @@
+<!-- select.html -->
+{% extends 'blog/base.html' %}
+{% load static%}
+{% block content %}
+<h2>Need another team to complete this place</h2>
+<form method="POST" class="post-form">
+    {% csrf_token %}
+    <b> Select a team: </b>
+    {{ sform.as_ul }}
+    <button type="submit" class="btn">OK</button>
+</form>
+
+{% endblock %}
+
+
