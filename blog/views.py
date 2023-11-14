@@ -145,6 +145,7 @@ def select_page(request,pk):
             state = place_to_state(place.Id_equipment)
             team.state=state
             team.save()
+            return redirect('team_detail',pk=pk)
             
         else:
             print(form.errors)
