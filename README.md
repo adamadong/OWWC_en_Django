@@ -1,5 +1,6 @@
 # OWWC_en_Django
  Autonomie pour info temps 2
+ 
 （打开python虚拟环境）
 PS D:\Web Development\OWWC\OWWC_en_Django> cd OWWC
 PS D:\Web Development\OWWC\OWWC_en_Django\OWWC> .\Scripts\activate
